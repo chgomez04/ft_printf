@@ -1,4 +1,4 @@
-*Este proyecto ha sido creado como parte del currículo de 42 por chgomez.*
+*This project was created as part of the 42 curriculum by chgomez.*
 
 # ft_printf
 

@@ -124,11 +124,6 @@ strings are freed after use.
 * 42 ft_printf subject
 * 42 Norm and peer evaluation practices
 
-AI was used during repository review to identify presentation gaps, validate the
-README against the subject requirements and spot small edge-case bugs. The code
-changes were limited to the existing implementation and were verified locally
-with the project `Makefile`.
-
 ## What I Learned
 
 * Using variadic arguments with `stdarg.h`
@@ -140,12 +135,11 @@ with the project `Makefile`.
 
 ## Notes
 
-This project follows the constraints and style expected in the 42 curriculum.
-The implementation is intentionally written in C and avoids relying on the
-standard `printf` internals.
+This project follows the constraints and style expected in the 42 curriculum.  
+The implementation is intentionally written in C and avoids relying on the standard `printf` internals.
 
 ## Author
 
-Christian Gomez  
-42 Barcelona student  
+Christian Gómez  
+Junior Software Developer in training at 42 Barcelona  
 GitHub: [github.com/chgomez04](https://github.com/chgomez04)

@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chgomez <chgomez@student.42barcelona.      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/19 18:11:30 by chgomez           #+#    #+#             */
+/*   Updated: 2025/05/22 17:28:16 by chgomez          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*sub_str;
+	size_t	s_len;
+	size_t	i;
+
+	if (s == NULL)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (len > (s_len - start))
+		len = s_len - start;
+	sub_str = (char *)malloc((len + 1) * (sizeof(char)));
+	if (sub_str == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len && *(s + (size_t)start + i) != '\0')
+	{
+		*(sub_str + i) = *(s + (size_t)start + i);
+		i++;
+	}
+	*(sub_str + i) = '\0';
+	return (sub_str);
+}

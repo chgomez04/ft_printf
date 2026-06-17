@@ -1,0 +1,23 @@
+# Compiled objects
+*.o
+*.a
+*.out
+a.out
+
+# Debug files
+*.dSYM/
+*.gch
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.swp
+
+# Documents
+*.pdf

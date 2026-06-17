@@ -6,3 +6,5 @@ tmp_obj/
 a.out
 test_printf
 test_ft_printf
+.vscode/
+.DS_Store

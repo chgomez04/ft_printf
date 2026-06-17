@@ -18,13 +18,22 @@ static int	len_total(char *str, t_format fmt, unsigned int num)
 
 	len = ft_strlen(str);
 	if (fmt.precision == 0 && num == 0)
-	{
-		free(str);
-		return (handle_width(fmt.width, 0, 0));
-	}
+		return (0);
 	if (fmt.precision > len)
 		len = fmt.precision;
 	return (len);
+}
+
+static int	print_number(char *str, t_format fmt, unsigned int num)
+{
+	int	count;
+
+	count = 0;
+	if (fmt.precision > (int)ft_strlen(str))
+		count += ft_pad_char('0', fmt.precision - ft_strlen(str));
+	if (!(fmt.precision == 0 && num == 0))
+		count += ft_putstr_count(str, 1);
+	return (count);
 }
 
 int	convert_u(va_list args, t_format fmt)
@@ -47,9 +56,7 @@ int	convert_u(va_list args, t_format fmt)
 		else
 			count += ft_pad_char(' ', fmt.width - len);
 	}
-	if (fmt.precision > (int)ft_strlen(str))
-		count += ft_pad_char('0', fmt.precision - ft_strlen(str));
-	count += ft_putstr_count(str, 1);
+	count += print_number(str, fmt, num);
 	if (fmt.minus && fmt.width > len)
 		count += ft_pad_char(' ', fmt.width - len);
 	free(str);

@@ -1,0 +1,8 @@
+*.a
+*.o
+objs/
+bonus_objs/
+tmp_obj/
+a.out
+test_printf
+test_ft_printf

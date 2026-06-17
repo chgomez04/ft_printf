@@ -22,12 +22,7 @@ int	convert_c(va_list args, t_format fmt)
 	if (fmt.width > 1 && fmt.minus == 0)
 	{
 		while (fmt.width-- > 1)
-		{
-			if (fmt.zero == '0')
-				count += ft_putchar_count('0', 1);
-			else if (fmt.zero == ' ')
-				count += ft_putchar_count(' ', 1);
-		}
+			count += ft_putchar_count(' ', 1);
 	}
 	count += ft_putchar_count(c, 1);
 	if (fmt.width > 1 && fmt.minus != 0)
